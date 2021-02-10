@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Mule Code Analysis"
+            id="kankani-mule-codeanalysis">
+      </category>
+      <view
+            id="kankanimulecodeanalysis.views.CodeAnalysisView"
+            name="CodeAnalysis View"
+            icon="icons/sample.png"
+            class="kankanimulecodeanalysis.views.CodeAnalysisView"
+            category="kankani-mule-codeanalysis"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               id="kankanimulecodeanalysis.views.CodeAnalysisView"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               ratio="0.5">
+         </view>
+      </perspectiveExtension>
+   </extension>
+<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:net.mornati.epomodoro.views.TeamStatus">
+         <command
+               commandId="epomodoro.SendMessageCommand"
+               icon="icons/message.png"
+               label="Send Message"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Kankani-mule-codeanalysis
+Bundle-SymbolicName: kankani-mule-codeanalysis;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: javax.inject
+Automatic-Module-Name: kankani-mule-codeanalysis
+Bundle-ClassPath: lib/groovy-3.0.7.jar,
+ .,
+ lib/groovy-eclipse-compiler-3.3.0-01.jar,
+ lib/groovy-json-3.0.7.jar,
+ lib/groovy-xml-3.0.7.jar,
+ lib/json-20190722.jar
